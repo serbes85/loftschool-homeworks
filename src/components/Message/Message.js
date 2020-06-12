@@ -1,7 +1,6 @@
 import React from 'react';
-import Chat from '../Chat/Chat.js';
 
-export default class Message extends  Chat {
+export default class Message extends React.Component {
     render() {
         const {text} = this.props;
 

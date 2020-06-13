@@ -1,5 +1,6 @@
 import React from 'react';
 import Message from '../Message';
+import './Chat.css';
 
 export default class Chat extends React.Component {
     constructor(props) {
@@ -14,10 +15,8 @@ export default class Chat extends React.Component {
     };
     sendMessageOnEnter = event => {
         if (event.key === 'Enter') {
-            this.setState(({ messages: [{ text: this.state.messageInput }] }));
+            this.setState(({ messages: [...this.state.messages, { text: this.state.messageInput }] }));
             this.setState({ messageInput: '' });
-            // console.log( 'click Enter', ({messages: this.state.messageInput}) );
-            // console.log( 'click Enter', ({messages: [{text: this.state.messageInput}]}) );
         }
     }
     render() {
@@ -28,9 +27,7 @@ export default class Chat extends React.Component {
         });
         return (
             <div className="chat">
-                <ul className="list">
-                    {messages.length ? list : null}
-                </ul>
+                {messages.length ? list : null}
                 <input
                     type="text"
                     className='input-message'

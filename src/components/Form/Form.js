@@ -6,18 +6,18 @@ class Form extends React.Component {
   state = {
     formState: [
       {
-        inputName: 'firstName',
+        inputName: 'firstname',
         inputLabel: 'Имя',
         value: '',
-        trueValue: 'James',
+        trueValue: 'james',
         status: 'null',
         errMessage: ''
       },
       {
-        inputName: 'lastName',
+        inputName: 'lastname',
         inputLabel: 'Фамилия',
         value: '',
-        trueValue: 'Bond',
+        trueValue: 'bond',
         status: 'null',
         errMessage: ''
       },
@@ -32,73 +32,144 @@ class Form extends React.Component {
     ],
     isLogin: false
   };
-
-  handleSubmit = (event) => {
-    event.preventDefault();
+  errorMessage = {
+    firstname: {
+      id: 0,
+      errMessageEmpty: 'Нужно указать имя',
+      errMessageIncorrect: 'Имя указано не верно'
+    },
+    lastname: {
+      id: 1,
+      errMessageEmpty: 'Нужно указать фамилию',
+      errMessageIncorrect: 'Фамилия указана не верно'
+    },
+    password: {
+      id: 2,
+      errMessageEmpty: 'Нужно указать пароль',
+      errMessageIncorrect: 'Пароль указан не верно'
+    }
   };
-  handleChangeInput = (event) => {};
-  handleClearInput = () => {};
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    let form = e.target;
+    // console.log(form);
+
+    for (let key in this.errorMessage) {
+      let id = this.errorMessage[key].id;
+      let currentElement = this.state.formState[id];
+      let state = this.state.formState.slice();
+      // console.log(state);
+      if (
+        !(
+          form[currentElement.inputName] && form[currentElement.inputName].value
+        )
+      ) {
+        state[id].errMessage = this.errorMessage[key].errMessageEmpty;
+        state[id].status = '';
+        // console.log(state[id].errMessage);
+      } else if (
+        form[currentElement.inputName] &&
+        form[currentElement.inputName].value !== currentElement.trueValue
+      ) {
+        state[id].errMessage = this.errorMessage[key].errMessageIncorrect;
+        state[id].status = '';
+        // console.log(state[id].errMessage);
+      } else {
+        state[id].errMessage = '';
+        state[id].status = 'validated';
+      }
+      this.setState({ formState: state });
+    }
+    let isValidated = this.state.formState.every((elem) => {
+      return elem.status === 'validated';
+    });
+
+    this.setState({ isLogin: isValidated });
+  };
+
+  handleChangeInput = (e) => {
+    let state = this.state.formState.slice();
+    let id = this.errorMessage[e.target.name].id;
+    let value = e.target.value;
+
+    state[id].value = value;
+    this.handleClearInput();
+    this.setState({ formState: state });
+  };
+  handleClearInput = () => {
+    let state = this.state.formState.slice();
+
+    state.forEach((elem) => {
+      elem.errMessage = '';
+      elem.status = null;
+    });
+    this.setState({ formState: state });
+  };
+
+  getFormState = () => {
+    return this.state.formState.map((item) => {
+      return (
+        <Input
+          key={item.inputName}
+          inputName={item.inputName}
+          inputLabel={item.inputLabel}
+          inputValue={item.value}
+          errMessage={item.errMessage}
+          handleChangeInput={this.handleChangeInput}
+        />
+      );
+    });
+  };
 
   render() {
-    let state = this.state.formState.slice();
-    console.log(state);
-
     if (this.state.isLogin) {
       return <Profile />;
-    } else {
-      return (
-        <div className="app-container">
-          <form className="form" onSubmit={this.handleSubmit}>
-            <h1>Введите свои данные, агент</h1>
-            {state.map((elem) => {
-              return (
-                <Input
-                  key={elem.inputLabel}
-                  inputName={elem.inputName}
-                  inputLabel={elem.inputLabel}
-                  inputValue={elem.value}
-                />
-              );
-            })}
-            <div className="form__buttons">
-              <input
-                type="submit"
-                className="button t-submit"
-                value="Проверить"
-              />
-            </div>
-          </form>
-        </div>
-      );
     }
-  }
-}
 
-class Input extends React.Component {
-  render() {
     return (
-      <p className="field">
-        <label className="field__label" htmlFor={this.props.inputName}>
-          <span className="field-label">{this.props.inputLabel}</span>
-        </label>
-        <input
-          className={'field__input field-input t-input-' + this.props.inputName}
-          type="text"
-          name={this.props.inputName}
-          value={this.props.inputValue}
-        />
-        <span
-          className={'field__error field-error t-error-' + this.props.inputName}
-        ></span>
-      </p>
+      <div className="app-container">
+        <form className="form" onSubmit={this.handleSubmit}>
+          <h1>Введите свои данные, агент</h1>
+          {this.getFormState()}
+          <div className="form__buttons">
+            <input
+              type="submit"
+              className="button t-submit"
+              value="Проверить"
+            />
+          </div>
+        </form>
+      </div>
     );
   }
 }
 
-function Profile(props) {
+function Input(props) {
+  return (
+    <p className="field">
+      <label className="field__label" htmlFor={props.inputName}>
+        <span className="field-label">{props.inputLabel}</span>
+      </label>
+      <input
+        className={'field__input field-input t-input-' + props.inputName}
+        type="text"
+        name={props.inputName}
+        value={props.inputValue}
+        onChange={props.handleChangeInput}
+      />
+      <span className={'field__error field-error t-error-' + props.inputName}>
+        {props.errMessage}
+      </span>
+    </p>
+  );
+}
+
+function Profile() {
   return (
     <div className="app-container">
-      <img className="t-bond-image" src={image} alt="bond approve" />
+      <img src={image} alt="bond approve" className="t-bond-image" />
     </div>
   );
 }

@@ -54,13 +54,13 @@ class Form extends React.Component {
     e.preventDefault();
 
     let form = e.target;
-    // console.log(form);
+    console.log('form', form);
 
     for (let key in this.errorMessage) {
       let id = this.errorMessage[key].id;
       let currentElement = this.state.formState[id];
       let state = this.state.formState.slice();
-      // console.log(state);
+
       if (
         !(
           form[currentElement.inputName] && form[currentElement.inputName].value
@@ -68,14 +68,12 @@ class Form extends React.Component {
       ) {
         state[id].errMessage = this.errorMessage[key].errMessageEmpty;
         state[id].status = '';
-        // console.log(state[id].errMessage);
       } else if (
         form[currentElement.inputName] &&
         form[currentElement.inputName].value !== currentElement.trueValue
       ) {
         state[id].errMessage = this.errorMessage[key].errMessageIncorrect;
         state[id].status = '';
-        // console.log(state[id].errMessage);
       } else {
         state[id].errMessage = '';
         state[id].status = 'validated';

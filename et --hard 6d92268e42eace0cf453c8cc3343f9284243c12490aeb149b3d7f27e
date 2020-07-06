@@ -1,0 +1,216 @@
+[33mcommit 7faabbc783650b1a766e1728db00a9842ac25ee0[m[33m ([m[1;36mHEAD -> [m[1;32mhomework-4-context-auth[m[33m)[m
+Author: Maksim Ivanov <satansdeer@gmail.com>
+Date:   Thu Aug 1 12:34:45 2019 +0300
+
+    Add more detailed description
+
+[33mcommit ab622219af15e717bc61a1aefe445a65a57fdf66[m
+Merge: adcd87f 6507bd0
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Sun Sep 30 20:20:37 2018 +0300
+
+    Merge branch 'homework-context-auth' of https://github.com/dex157/sep-react-homeworks into homework-context-auth
+
+[33mcommit adcd87fc999dde9e61f877b79b1fce73a50976a3[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Sun Sep 30 19:56:39 2018 +0300
+
+    add homework
+
+[33mcommit f453c8cc3343f9284243c12490aeb149b3d7f27e[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Sun Sep 30 20:17:34 2018 +0300
+
+    fix circle config #2
+
+[33mcommit fa2431cf572a2467f32c48f3c1026bc70ce12f46[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Sun Sep 30 20:16:21 2018 +0300
+
+    fix circle config
+
+[33mcommit cc4752bab2f155e0f2d5c6b5bda9cb81bb02099e[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Sun Sep 30 20:01:37 2018 +0300
+
+    update configs
+
+[33mcommit 6507bd024f17186529230098c169a7a0f2ad8519[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Sun Sep 30 19:56:39 2018 +0300
+
+    add homework
+
+[33mcommit 5e703494fc24a8724a2545a372aedaa76a07760d[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Sun Sep 30 10:46:45 2018 +0300
+
+    final update circle ci script
+
+[33mcommit bb48adb2dd8771353eaee035d461ee4cde0504da[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Sun Sep 30 10:12:02 2018 +0300
+
+    update circle ci config: remove service-worker section
+
+[33mcommit 8215bb4e95141b1017cee16708eb1a43495333c9[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Sat Sep 29 23:24:15 2018 +0300
+
+    optimize config
+
+[33mcommit 2f72a7dc8f0959d37e8b135813773ef4b3284842[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Sat Sep 29 22:32:53 2018 +0300
+
+    update circle cache politic
+
+[33mcommit 410ca940d71ce01c2190894f45b85df6d52c589d[m
+Author: Artem Samofalov <dex157@icloud.com>
+Date:   Sat Sep 29 22:24:46 2018 +0300
+
+    trigger ci
+
+[33mcommit d0951bd3050104e293c91185ee966d599d017bbb[m
+Author: Artem Samofalov <dex157@icloud.com>
+Date:   Sat Sep 29 22:17:39 2018 +0300
+
+    clear circleci config
+
+[33mcommit b25fb2ec63dd8f315adc5e2b7b4987c878b340cb[m
+Author: Artem Samofalov <dex157@icloud.com>
+Date:   Sat Sep 29 22:15:55 2018 +0300
+
+    move ci to workflows
+
+[33mcommit f7b4e8fbd133441465b1e56be861597eb8af3b10[m
+Author: Artem Samofalov <dex157@icloud.com>
+Date:   Sat Sep 29 12:39:57 2018 +0300
+
+    clear app component
+
+[33mcommit d6ddf2062d7697f6d1028b8324bab8f398963a5e[m
+Author: Artem Samofalov <dex157@icloud.com>
+Date:   Sat Sep 29 12:21:22 2018 +0300
+
+    add new rules for eslint
+
+[33mcommit b1a9958f3ae324d44090899183fc5cd60f772d2b[m
+Author: Artem Samofalov <dex157@icloud.com>
+Date:   Fri Sep 28 18:53:27 2018 +0300
+
+    update eslint and gitignore configs
+
+[33mcommit d02ef1a4464249537778b303029b83eeb7e22217[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Thu Sep 27 00:37:20 2018 +0300
+
+    update ci
+
+[33mcommit c68d19b1cdc0c0f07060fd54b58ff5f23b29eb46[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Wed Sep 26 22:49:02 2018 +0300
+
+    update ci script
+
+[33mcommit ad10080ff4a2b016c3df2ce38952595749d559ef[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Wed Sep 26 19:18:06 2018 +0300
+
+    remove travis
+
+[33mcommit 0e38c267719b9644e866a89984fff0b7003f2127[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Wed Sep 26 19:05:32 2018 +0300
+
+    trigger ci
+
+[33mcommit e0cf7e3b846bfb3a644ba2104372a0c3c80f7354[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Wed Sep 26 19:03:24 2018 +0300
+
+    trigger ci
+
+[33mcommit 87f025f2f60b7345df9513889dba99b0a1e3b7b8[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Wed Sep 26 19:00:24 2018 +0300
+
+    trigger ci
+
+[33mcommit 808d90c408b5c468f3d64030afef707620dd36bb[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Wed Sep 26 17:47:03 2018 +0300
+
+    update circle
+
+[33mcommit f38bc4b0429fb08881a30937ecab0dc0487a3531[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Wed Sep 26 16:01:16 2018 +0300
+
+    experement with circle and cypress
+
+[33mcommit e882794057fd27eb304e674a0c181b6f0e9fb1b7[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Wed Sep 26 15:56:37 2018 +0300
+
+    update cache section in circle config file
+
+[33mcommit cc09218ba30c92bf45e8aa72234e0c88c325b7cc[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Wed Sep 26 15:53:37 2018 +0300
+
+    trigger ci
+
+[33mcommit 577a92ff4553c764a8642edf9b5474028bdbbf2c[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Wed Sep 26 15:51:05 2018 +0300
+
+    add cypress docker image for circle ci
+
+[33mcommit 2a5743ff70e088b011a6eaaa92e8c65046a0d940[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Wed Sep 26 15:45:29 2018 +0300
+
+    clear errors #2
+
+[33mcommit f365226bcee6209f9095bdc029cd6b8f9ba9d176[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Wed Sep 26 15:45:13 2018 +0300
+
+    clear errors
+
+[33mcommit a9a0ce2410237857aae20d932d00b6879a10be79[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Wed Sep 26 15:36:34 2018 +0300
+
+    update circle ci
+
+[33mcommit 792270e6159e78e6bbc113900be00adc120cd7d7[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Wed Sep 26 15:29:11 2018 +0300
+
+    trigger ci
+
+[33mcommit 902b39fa12be7a2d1361cbf0d644ffdac3a9e950[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Wed Sep 26 15:28:04 2018 +0300
+
+    trigger ci
+
+[33mcommit e943b95b2421beadff7411aae18f08daf1795207[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Wed Sep 26 15:25:00 2018 +0300
+
+    test ci config
+
+[33mcommit 681d86d36c8021d89e4a8e97f54b9a692c1e78e2[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Wed Sep 26 15:01:23 2018 +0300
+
+    add circle ci config
+
+[33mcommit cd2b4523c121e91e275c9c70d3595dff86602664[m
+Author: satansdeer <satansdeer@gmail.com>
+Date:   Mon Sep 24 23:36:16 2018 +0300
+
+    init commit

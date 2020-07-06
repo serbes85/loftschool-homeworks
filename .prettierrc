@@ -3,7 +3,7 @@ proseWrap: always
 singleQuote: true
 semi: true
 bracketSpacing: true
-parser: babylon
+parser: babel
 trailingComma: none
 overrides:
 - files:

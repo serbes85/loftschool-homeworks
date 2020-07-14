@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from "react";
 
 /*
     В этом задании мы потренируемся писать простой кастомный хук.
@@ -15,4 +15,12 @@ import React, {useState} from 'react'
 */
 
 export const useCounter = () => {
-}
+  const [count, setCount] = useState(0);
+  function increment() {
+    setCount(count + 1);
+  }
+  function decrement() {
+    setCount(count - 1);
+  }
+  return { count, increment, decrement };
+};

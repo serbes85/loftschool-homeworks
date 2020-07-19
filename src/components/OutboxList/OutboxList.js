@@ -9,8 +9,10 @@ import MailList from '../MailList';
 
 class OutboxList extends Component {
   render() {
-    const { data } = this.props;
-    const { pathname } = this.props.location;
+    const {
+      data,
+      location: { pathname }
+    } = this.props;
 
     return <MailList path={pathname} data={data.outbox} mod="t-outbox-list" />;
   }

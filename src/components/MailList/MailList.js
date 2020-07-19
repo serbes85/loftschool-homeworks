@@ -11,13 +11,9 @@ const MailList = props => {
 
   return (
     <div className={classNames(styles.container, mod)}>
-      {data.map(element => (
-        <Link
-          key={element.id}
-          to={`${path}/${element.id}`}
-          className={styles.link}
-        >
-          {element.body.substr(0, 50)}
+      {data.map(({ id, body }) => (
+        <Link key={id} to={`${path}/${id}`} className={styles.link}>
+          {body.substr(0, 50)}
         </Link>
       ))}
     </div>

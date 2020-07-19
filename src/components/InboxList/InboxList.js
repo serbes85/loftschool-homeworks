@@ -10,8 +10,10 @@ import { withData } from '../../context/Data';
 
 class InboxList extends Component {
   render() {
-    const { data } = this.props;
-    const { pathname } = this.props.location;
+    const {
+      data,
+      location: { pathname }
+    } = this.props;
 
     return <MailList data={data.inbox} path={pathname} mod="t-inbox-list" />;
   }

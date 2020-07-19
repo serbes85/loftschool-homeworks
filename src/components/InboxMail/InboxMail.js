@@ -4,6 +4,7 @@ import Mail from '../Mail';
 
 class InboxMail extends PureComponent {
   render() {
+    console.log('TRALALA');
     const {
       match: {
         params: { id }

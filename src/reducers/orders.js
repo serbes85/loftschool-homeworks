@@ -77,10 +77,12 @@ export default (state = [], action) => {
       const { from, ingredient } = action.payload;
 
       return state.map(element => {
+        const { position, ingredients, recipe } = element;
+
         if (
-          element.position === from &&
-          !element.ingredients.includes(ingredient) &&
-          element.recipe.includes(ingredient)
+          position === from &&
+          !ingredients.includes(ingredient) &&
+          recipe.includes(ingredient)
         ) {
           return {
             ...element,

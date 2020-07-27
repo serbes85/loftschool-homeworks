@@ -4,13 +4,17 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.2.6",
+    "middleware": "^1.0.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.4",
+    "reducer": "^0.19.2",
     "redux": "^4.0.0",
-    "redux-actions": "^2.6.1"
+    "redux-actions": "^2.6.1",
+    "reselect": "^4.0.0",
+    "selectors": "^0.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

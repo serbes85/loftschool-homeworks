@@ -5,3 +5,22 @@
 // В случае ошибки showSuccess
 
 // На забудьте вызвать метод next.
+
+import { show } from '../api.js';
+import { showRequest, showSuccess, showFailure } from '../actions';
+
+const showMiddleware = store => next => action => {
+  if (action.type === showRequest.toString()) {
+    show(action.payload).then(
+      data => {
+        store.dispatch(showSuccess(data));
+      },
+      error => {
+        store.dispatch(showFailure(error));
+      }
+    );
+  }
+  return next(action);
+};
+
+export default showMiddleware;

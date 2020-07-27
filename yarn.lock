@@ -6547,6 +6547,11 @@ micromatch@^3.1.10, micromatch@^3.1.4, micromatch@^3.1.8, micromatch@^3.1.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.2"
 
+middleware@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/middleware/-/middleware-1.0.0.tgz#7d1c6363a403a0812e5740dc44e4246e7b025ce2"
+  integrity sha1-fRxjY6QDoIEuV0DcROQkbnsCXOI=
+
 miller-rabin@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/miller-rabin/-/miller-rabin-4.0.1.tgz#f080351c865b0dc562a8462966daa53543c78a4d"
@@ -8677,6 +8682,11 @@ reduce-reducers@^0.1.0:
   resolved "https://registry.yarnpkg.com/reduce-reducers/-/reduce-reducers-0.1.5.tgz#ff77ca8068ff41007319b8b4b91533c7e0e54576"
   integrity sha512-uoVmQnZQ+BtKKDKpBdbBri5SLNyIK9ULZGOA504++VbHcwouWE+fJDIo8AuESPF9/EYSkI0v05LDEQK6stCbTA==
 
+reducer@^0.19.2:
+  version "0.19.2"
+  resolved "https://registry.yarnpkg.com/reducer/-/reducer-0.19.2.tgz#8e140234070c118e016067107b5551bdc1c58e7b"
+  integrity sha1-jhQCNAcMEY4BYGcQe1VRvcHFjns=
+
 redux-actions@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/redux-actions/-/redux-actions-2.6.1.tgz#42c06e94739fbe6db35db3605abb105bdb3724d8"
@@ -8930,6 +8940,11 @@ requires-port@^1.0.0:
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
 
+reselect@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/reselect/-/reselect-4.0.0.tgz#f2529830e5d3d0e021408b246a206ef4ea4437f7"
+  integrity sha512-qUgANli03jjAyGlnbYVAV5vvnOmJnODyABz51RdBN7M4WaVu8mecZWgyQNkG8Yqe3KRGRt0l4K4B3XVEULC4CA==
+
 resolve-cwd@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/resolve-cwd/-/resolve-cwd-2.0.0.tgz#00a9f7387556e27038eae232caa372a6a59b665a"
@@ -9154,6 +9169,13 @@ select-hose@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/select-hose/-/select-hose-2.0.0.tgz#625d8658f865af43ec962bfc376a37359a4994ca"
   integrity sha1-Yl2GWPhlr0Psliv8N2o3NZpJlMo=
+
+selectors@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/selectors/-/selectors-0.0.1.tgz#b0dc77ce22ca76225874646a0469638bf7da0431"
+  integrity sha1-sNx3ziLKdiJYdGRqBGlji/faBDE=
+  dependencies:
+    xtend latest
 
 selfsigned@^1.9.1:
   version "1.10.3"
@@ -10716,6 +10738,11 @@ xtend@^4.0.0, xtend@~4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.1.tgz#a5c6d532be656e23db820efb943a1f04998d63af"
   integrity sha1-pcbVMr5lbiPbgg77lDofBJmNY68=
+
+xtend@latest:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.2.tgz#bb72779f5fa465186b1f438f674fa347fdb5db54"
+  integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
 
 y18n@^3.2.1:
   version "3.2.1"

@@ -1,41 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Message from '../Message';
 import './Chat.css';
 
-export default class Chat extends React.Component {
-  state = {
-    messages: [],
-    messageInput: ''
+const Chat = () => {
+  const [messageInput, setMessageInput] = useState('');
+  const [messages, setMessages] = useState([]);
+
+  const changeInputMessage = (event) => {
+    setMessageInput(event.target.value);
   };
-  changeInputMessage = (event) => {
-    this.setState({ messageInput: event.target.value });
-  };
-  sendMessageOnEnter = (event) => {
+  const sendMessageOnEnter = (event) => {
     if (event.key === 'Enter') {
-      this.setState({
-        messages: [...this.state.messages, { text: this.state.messageInput }]
-      });
-      this.setState({ messageInput: '' });
+      setMessages([...messages, { text: messageInput }]);
+      setMessageInput('');
     }
   };
-  render() {
-    const { messages, messageInput } = this.state;
 
-    const list = messages.map((item, index) => {
-      return <Message text={item.text} key={index} />;
-    });
-    return (
-      <div className="chat">
-        {messages.length ? list : null}
-        <input
-          type="text"
-          className="input-message"
-          onChange={this.changeInputMessage}
-          onKeyPress={this.sendMessageOnEnter}
-          value={messageInput}
-          placeholder="Enter text please"
-        />
+  const listMessages = messages.map((item, index) => {
+    return <Message text={item.text} key={Date.now()} />;
+  });
+  return (
+    <div className="chat">
+      <div className="message-list">
+        <div className="messages">
+          {listMessages.length ? listMessages : null}
+        </div>
       </div>
-    );
-  }
-}
+      <input
+        type="text"
+        className="input-message"
+        onChange={changeInputMessage}
+        onKeyPress={sendMessageOnEnter}
+        value={messageInput}
+        placeholder="Enter text please"
+      />
+    </div>
+  );
+};
+
+export default Chat;
